@@ -20,8 +20,8 @@
             <Other_Please_Specify/>
           </group_fs2xc91>
           <group_vx69z33>
-            <Is_there_a_Tree_Identification_Code/>
             <tree_identification_code/>
+            <Is_there_a_Tree_Identification_Code/>
           </group_vx69z33>
           <!--          <Are_there_any_other_remarks/>-->
           <Location_of_the_tree/>
@@ -111,7 +111,7 @@
     </group>
     <group ref="/data/group_vx69z33">
       <label>Identification Code</label>
-      <select1 ref="/data/group_vx69z33/Is_there_a_Tree_Identification_Code">
+      <select1 ref="/data/group_vx69z33/tree_identification_code">
         <label>Is there a Tree Identification Code?</label>
         <item>
           <label>Yes</label>
@@ -122,7 +122,7 @@
           <value>no</value>
         </item>
       </select1>
-      <input ref="/data/group_vx69z33/tree_identification_code">
+      <input ref="/data/group_vx69z33/Is_there_a_Tree_Identification_Code">
         <label>Mention the code.</label>
       </input>
     </group>
