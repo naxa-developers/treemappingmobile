@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal">
 
-    <org.light.collect.android.views.MediaLayout
+    <org.light.collect.treemappingmobile.views.MediaLayout
         android:id="@+id/mediaLayout"
         android:orientation="horizontal"
         android:layout_width="0dp"

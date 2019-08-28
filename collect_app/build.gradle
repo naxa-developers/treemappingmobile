@@ -68,7 +68,7 @@ android {
     compileSdkVersion(28)
 
     defaultConfig {
-        applicationId('org.light.collect.android')
+        applicationId('org.light.collect.treemappingmobile')
         minSdkVersion(16)
         targetSdkVersion(26)
         versionCode(8)
