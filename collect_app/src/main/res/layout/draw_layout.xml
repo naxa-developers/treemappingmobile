@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="org.light.collect.android.activities.DrawActivity">
+    tools:context="org.light.collect.treemappingmobile.activities.DrawActivity">
 
-    <org.light.collect.android.views.DrawView
+    <org.light.collect.treemappingmobile.views.DrawView
         android:id="@+id/drawView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" >
-    </org.light.collect.android.views.DrawView>
+    </org.light.collect.treemappingmobile.views.DrawView>
 
     <android.support.v7.widget.CardView
         android:id="@+id/cv_clear"

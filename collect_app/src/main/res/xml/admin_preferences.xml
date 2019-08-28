@@ -18,7 +18,7 @@
         android:key="admin_password"
         android:title="@string/admin_password" />
 
-    <org.light.collect.android.preferences.ResetDialogPreference
+    <org.light.collect.treemappingmobile.preferences.ResetDialogPreference
         android:dialogTitle="@string/reset_settings_dialog_title"
         android:key="reset_settings"
         android:negativeButtonText="@string/cancel"

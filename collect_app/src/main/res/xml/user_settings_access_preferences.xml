@@ -4,7 +4,7 @@
         <CheckBoxPreference
             android:key="change_server"
             android:title="@string/server" />
-        <org.light.collect.android.preferences.ExtendedCheckboxPreference
+        <org.light.collect.treemappingmobile.preferences.ExtendedCheckboxPreference
             android:key="change_submission_transport"
             android:title="@string/submission_transport_admin_setting"
             android:dependency="change_server"
