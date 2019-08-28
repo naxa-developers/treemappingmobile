@@ -293,7 +293,12 @@ public class InstanceUploaderListBodged extends InstanceListActivity implements
                         data.remove("Other_Please_Specify");
                     }
 
-
+                    boolean otherIsTreeIdentificationCode = data.has("Is_there_a_Tree_Identification_Code");
+                    if (otherIsTreeIdentificationCode) {
+                        data.remove("tree_identification_code");
+                        data.put("tree_identification_code", data.get("Is_there_a_Tree_Identification_Code"));
+                        data.remove("Is_there_a_Tree_Identification_Code");
+                    }
 
                     String photoName = data.getString("Photograph_of_the_tree");
                     data.remove("Photograph_of_the_tree");

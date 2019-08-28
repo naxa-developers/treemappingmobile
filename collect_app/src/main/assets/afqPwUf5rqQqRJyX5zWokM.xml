@@ -20,10 +20,10 @@
             <Other_Please_Specify/>
           </group_fs2xc91>
           <group_vx69z33>
-            <Is_there_a_Tree_Identification/>
+            <Is_there_a_Tree_Identification_Code/>
             <tree_identification_code/>
           </group_vx69z33>
-<!--          <Are_there_any_other_remarks/>-->
+          <!--          <Are_there_any_other_remarks/>-->
           <Location_of_the_tree/>
           <Photograph_of_the_tree/>
           <__version__/>
@@ -40,9 +40,9 @@
       <bind nodeset="/data/group_hz8od42/age_of_tree" required="false()" type="int"/>
       <bind nodeset="/data/group_fs2xc91/condition_of_the_tree" required="false()" type="select1"/>
       <bind nodeset="/data/group_fs2xc91/Other_Please_Specify" relevant=" /data/group_fs2xc91/condition_of_the_tree  = 'other'" required="false()" type="string"/>
-      <bind nodeset="/data/group_vx69z33/Is_there_a_Tree_Identification" required="false()" type="select1"/>
-      <bind nodeset="/data/group_vx69z33/tree_identification_code" relevant=" /data/group_vx69z33/Is_there_a_Tree_Identification  = 'yes'" required="false()" type="string"/>
-<!--      <bind nodeset="/data/Are_there_any_other_remarks" required="false()" type="string"/>-->
+      <bind nodeset="/data/group_vx69z33/tree_identification_code" required="false()" type="select1"/>
+      <bind nodeset="/data/group_vx69z33/Is_there_a_Tree_Identification_Code" relevant=" /data/group_vx69z33/tree_identification_code  = 'yes'" required="false()" type="string"/>
+      <!--      <bind nodeset="/data/Are_there_any_other_remarks" required="false()" type="string"/>-->
       <bind nodeset="/data/Location_of_the_tree" required="false()" type="geopoint"/>
       <bind nodeset="/data/Photograph_of_the_tree" required="false()" type="binary"/>
       <bind calculate="'v6fzWnUkJz2h7TXcw79FUB'" nodeset="/data/__version__" required="false()" type="string"/>
@@ -111,7 +111,7 @@
     </group>
     <group ref="/data/group_vx69z33">
       <label>Identification Code</label>
-      <select1 ref="/data/group_vx69z33/Is_there_a_Tree_Identification">
+      <select1 ref="/data/group_vx69z33/Is_there_a_Tree_Identification_Code">
         <label>Is there a Tree Identification Code?</label>
         <item>
           <label>Yes</label>
@@ -126,10 +126,10 @@
         <label>Mention the code.</label>
       </input>
     </group>
-<!--    <input ref="/data/Are_there_any_other_remarks">-->
-<!--      <label>Are there any other remarks?</label>-->
-<!--      <hint>(Specify if any)</hint>-->
-<!--    </input>-->
+    <!--    <input ref="/data/Are_there_any_other_remarks">-->
+    <!--      <label>Are there any other remarks?</label>-->
+    <!--      <hint>(Specify if any)</hint>-->
+    <!--    </input>-->
     <input ref="/data/Location_of_the_tree">
       <label>Location of the tree.</label>
       <hint>(GPS Coordinate)</hint>
