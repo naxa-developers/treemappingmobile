@@ -277,7 +277,7 @@ public class InstanceUploaderListBodged extends InstanceListActivity implements
                     JSONObject jsonObject = new JSONObject(cleanedString);
 
                     Timber.i(cleanedString);
-                    Timber.i(jsonObject.toString());
+                    Timber.i("Uploading raw Data %s ",jsonObject.toString());
 
                     JSONObject data = jsonObject.getJSONObject("data");
 
@@ -286,14 +286,28 @@ public class InstanceUploaderListBodged extends InstanceListActivity implements
                     }
 
 
-                    boolean otherIsSelectedInPole = data.has("Other_Please_Specify");
-                    if (otherIsSelectedInPole) {
+                    boolean otherIsIsConditionOfTree = data.has("Other_Please_Specify");
+                    if (otherIsIsConditionOfTree) {
                         data.remove("condition_of_the_tree");
                         data.put("condition_of_the_tree", data.get("Other_Please_Specify"));
                         data.remove("Other_Please_Specify");
                     }
 
+                    boolean otherIsTreeIdentificationCode = data.has("Is_there_a_Tree_Identification_Code");
+                    if (otherIsTreeIdentificationCode) {
+                        data.remove("tree_identification_code");
+                        data.put("tree_identification_code", data.get("Is_there_a_Tree_Identification_Code"));
+                        data.remove("Is_there_a_Tree_Identification_Code");
+                    }
 
+                    boolean hasXmlnsKey = data.has("xmlns:odk");
+                    if(hasXmlnsKey){
+                        data.remove("xmlns:odk");
+                    }
+//                    boolean hasHttpKey = data.has("http");
+//                    if(hasHttpKey){
+//                        data.remove("http");
+//                    }
 
                     String photoName = data.getString("Photograph_of_the_tree");
                     data.remove("Photograph_of_the_tree");

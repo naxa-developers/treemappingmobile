@@ -27,7 +27,7 @@ import android.provider.BaseColumns;
  * {@link FormsColumns#JR_FORM_ID} unless multiple {@link FormsColumns#JR_VERSION}s are defined.
  */
 public final class FormsProviderAPI {
-    static final String AUTHORITY = "org.light.collect.android.provider.odk.forms";
+    static final String AUTHORITY = "org.light.collect.treemappingmobile.provider.odk.forms";
 
     private FormsProviderAPI() {
     }
