@@ -25,17 +25,17 @@
             </instance>
             <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
             <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
-            <bind nodeset="/data/local_name_of_the_tree" required="false()" type="string"/>
+            <bind nodeset="/data/local_name_of_the_tree" required="true()" type="string"/>
             <bind nodeset="/data/scientific_name_of_tree" required="false()" type="string"/>
-            <bind nodeset="/data/how_young_is_the_tree" required="false()" type="select1"/>
-            <bind nodeset="/data/age_of_tree" required="false()" type="int"/>
-            <bind nodeset="/data/condition_of_the_tree" required="false()" type="select1"/>
-            <bind nodeset="/data/Other_Please_Specify" relevant=" /data/condition_of_the_tree  = 'other'" required="false()" type="string"/>
-            <bind nodeset="/data/tree_identification_code" required="false()" type="select1"/>
-            <bind nodeset="/data/Is_there_a_Tree_Identification_Code" relevant=" /data/tree_identification_code  = 'yes'" required="false()" type="string"/>
+            <bind nodeset="/data/how_young_is_the_tree" required="true()" type="select1"/>
+            <bind nodeset="/data/age_of_tree" required="true()" type="int"/>
+            <bind nodeset="/data/condition_of_the_tree" required="true()" type="select1"/>
+            <bind nodeset="/data/Other_Please_Specify" relevant=" /data/condition_of_the_tree  = 'other'" required="true()" type="string"/>
+            <bind nodeset="/data/tree_identification_code" required="true()" type="select1"/>
+            <bind nodeset="/data/Is_there_a_Tree_Identification_Code" relevant=" /data/tree_identification_code  = 'yes'" required="true()" type="string"/>
             <bind nodeset="/data/remarks" required="false()" type="string"/>
-            <bind nodeset="/data/Location_of_the_tree" required="false()" type="geopoint"/>
-            <bind nodeset="/data/Photograph_of_the_tree" required="false()" type="binary"/>
+            <bind nodeset="/data/Location_of_the_tree" required="true()" type="geopoint"/>
+            <bind nodeset="/data/Photograph_of_the_tree" required="true()" type="binary"/>
             <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
         </model>
     </h:head>
