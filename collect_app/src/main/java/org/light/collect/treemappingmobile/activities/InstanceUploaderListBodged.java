@@ -277,7 +277,7 @@ public class InstanceUploaderListBodged extends InstanceListActivity implements
                     JSONObject jsonObject = new JSONObject(cleanedString);
 
                     Timber.i(cleanedString);
-                    Timber.i(jsonObject.toString());
+                    Timber.i("Uploading raw Data %s ",jsonObject.toString());
 
                     JSONObject data = jsonObject.getJSONObject("data");
 
@@ -286,8 +286,8 @@ public class InstanceUploaderListBodged extends InstanceListActivity implements
                     }
 
 
-                    boolean otherIsSelectedInPole = data.has("Other_Please_Specify");
-                    if (otherIsSelectedInPole) {
+                    boolean otherIsIsConditionOfTree = data.has("Other_Please_Specify");
+                    if (otherIsIsConditionOfTree) {
                         data.remove("condition_of_the_tree");
                         data.put("condition_of_the_tree", data.get("Other_Please_Specify"));
                         data.remove("Other_Please_Specify");

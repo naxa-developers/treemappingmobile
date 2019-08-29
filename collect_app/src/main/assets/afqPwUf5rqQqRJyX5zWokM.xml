@@ -1,141 +1,119 @@
 <?xml version="1.0"?>
 <h:html xmlns="http://www.w3.org/2002/xforms" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:jr="http://openrosa.org/javarosa" xmlns:odk="http://www.opendatakit.org/xforms" xmlns:orx="http://openrosa.org/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <h:head>
-    <h:title>Chakrapath Tree Mapping</h:title>
-    <model>
-      <instance>
-        <data id="snapshot_xml">
-          <start/>
-          <end/>
-          <group_tj5pl63>
-            <local_name_of_the_tree/>
-            <scientific_name_of_tree/>
-          </group_tj5pl63>
-          <group_hz8od42>
-            <how_young_is_the_tree/>
-            <age_of_tree/>
-          </group_hz8od42>
-          <group_fs2xc91>
-            <condition_of_the_tree/>
-            <Other_Please_Specify/>
-          </group_fs2xc91>
-          <group_vx69z33>
-            <tree_identification_code/>
-            <Is_there_a_Tree_Identification_Code/>
-          </group_vx69z33>
-          <!--          <Are_there_any_other_remarks/>-->
-          <Location_of_the_tree/>
-          <Photograph_of_the_tree/>
-          <__version__/>
-          <meta>
-            <instanceID/>
-          </meta>
-        </data>
-      </instance>
-      <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
-      <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
-      <bind nodeset="/data/group_tj5pl63/local_name_of_the_tree" required="false()" type="string"/>
-      <bind nodeset="/data/group_tj5pl63/scientific_name_of_tree" required="false()" type="string"/>
-      <bind nodeset="/data/group_hz8od42/how_young_is_the_tree" required="false()" type="select1"/>
-      <bind nodeset="/data/group_hz8od42/age_of_tree" required="false()" type="int"/>
-      <bind nodeset="/data/group_fs2xc91/condition_of_the_tree" required="false()" type="select1"/>
-      <bind nodeset="/data/group_fs2xc91/Other_Please_Specify" relevant=" /data/group_fs2xc91/condition_of_the_tree  = 'other'" required="false()" type="string"/>
-      <bind nodeset="/data/group_vx69z33/tree_identification_code" required="false()" type="select1"/>
-      <bind nodeset="/data/group_vx69z33/Is_there_a_Tree_Identification_Code" relevant=" /data/group_vx69z33/tree_identification_code  = 'yes'" required="false()" type="string"/>
-      <!--      <bind nodeset="/data/Are_there_any_other_remarks" required="false()" type="string"/>-->
-      <bind nodeset="/data/Location_of_the_tree" required="false()" type="geopoint"/>
-      <bind nodeset="/data/Photograph_of_the_tree" required="false()" type="binary"/>
-      <bind calculate="'v6fzWnUkJz2h7TXcw79FUB'" nodeset="/data/__version__" required="false()" type="string"/>
-      <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
-    </model>
-  </h:head>
-  <h:body>
-    <group appearance="field-list" ref="/data/group_tj5pl63">
-      <label>Tree identification.</label>
-      <input ref="/data/group_tj5pl63/local_name_of_the_tree">
-        <label>What is the local name of the tree?</label>
-        <hint>(for example - Peepal)</hint>
-      </input>
-      <input ref="/data/group_tj5pl63/scientific_name_of_tree">
-        <label>What is the scientific name of the tree?</label>
-        <hint>(for example - Ficus religiosa)</hint>
-      </input>
-    </group>
-    <group appearance="field-list" ref="/data/group_hz8od42">
-      <label>Age of the tree.</label>
-      <select1 ref="/data/group_hz8od42/how_young_is_the_tree">
-        <label>How old is the tree?</label>
-        <hint>(Choose one)</hint>
-        <item>
-          <label>Very Young</label>
-          <value>very_young</value>
-        </item>
-        <item>
-          <label>Medium</label>
-          <value>medium</value>
-        </item>
-        <item>
-          <label>Old</label>
-          <value>old</value>
-        </item>
-      </select1>
-      <input ref="/data/group_hz8od42/age_of_tree">
-        <label>Tentative age of the tree:</label>
-        <hint>(Approximate age of the tree)</hint>
-      </input>
-    </group>
-    <group ref="/data/group_fs2xc91">
-      <label>Condition of the tree.</label>
-      <select1 ref="/data/group_fs2xc91/condition_of_the_tree">
-        <label>How is the condition of the tree?</label>
-        <item>
-          <label>Healthy</label>
-          <value>healthy</value>
-        </item>
-        <item>
-          <label>Partially Damaged</label>
-          <value>partially_damaged</value>
-        </item>
-        <item>
-          <label>Fully Damaged</label>
-          <value>fully_damaged</value>
-        </item>
-        <item>
-          <label>Other</label>
-          <value>other</value>
-        </item>
-      </select1>
-      <input ref="/data/group_fs2xc91/Other_Please_Specify">
-        <label>Other - Please Specify.</label>
-      </input>
-    </group>
-    <group ref="/data/group_vx69z33">
-      <label>Identification Code</label>
-      <select1 ref="/data/group_vx69z33/tree_identification_code">
-        <label>Is there a Tree Identification Code?</label>
-        <item>
-          <label>Yes</label>
-          <value>yes</value>
-        </item>
-        <item>
-          <label>No</label>
-          <value>no</value>
-        </item>
-      </select1>
-      <input ref="/data/group_vx69z33/Is_there_a_Tree_Identification_Code">
-        <label>Mention the code.</label>
-      </input>
-    </group>
-    <!--    <input ref="/data/Are_there_any_other_remarks">-->
-    <!--      <label>Are there any other remarks?</label>-->
-    <!--      <hint>(Specify if any)</hint>-->
-    <!--    </input>-->
-    <input ref="/data/Location_of_the_tree">
-      <label>Location of the tree.</label>
-      <hint>(GPS Coordinate)</hint>
-    </input>
-    <upload mediatype="image/*" ref="/data/Photograph_of_the_tree">
-      <label>Photograph of the tree.</label>
-    </upload>
-  </h:body>
+    <h:head>
+        <h:title>Chakrapath Tree Mapping</h:title>
+        <model>
+            <instance>
+                <data id="snapshot_xml">
+                    <start/>
+                    <end/>
+                    <local_name_of_the_tree/>
+                    <scientific_name_of_tree/>
+                    <how_young_is_the_tree/>
+                    <Tentative_age_of_the_tree/>
+                    <condition_of_the_tree/>
+                    <Other_Please_Specify/>
+                    <tree_identification_code/>
+                    <Is_there_a_Tree_Identification_Code/>
+                    <remarks/>
+                    <Location_of_the_tree/>
+                    <Photograph_of_the_tree/>
+                    <meta>
+                        <instanceID/>
+                    </meta>
+                </data>
+            </instance>
+            <bind jr:preload="timestamp" jr:preloadParams="start" nodeset="/data/start" type="dateTime"/>
+            <bind jr:preload="timestamp" jr:preloadParams="end" nodeset="/data/end" type="dateTime"/>
+            <bind nodeset="/data/local_name_of_the_tree" required="false()" type="string"/>
+            <bind nodeset="/data/scientific_name_of_tree" required="false()" type="string"/>
+            <bind nodeset="/data/how_young_is_the_tree" required="false()" type="select1"/>
+            <bind nodeset="/data/Tentative_age_of_the_tree" required="false()" type="int"/>
+            <bind nodeset="/data/condition_of_the_tree" required="false()" type="select1"/>
+            <bind nodeset="/data/Other_Please_Specify" relevant=" /data/condition_of_the_tree  = 'other'" required="false()" type="string"/>
+            <bind nodeset="/data/tree_identification_code" required="false()" type="select1"/>
+            <bind nodeset="/data/Is_there_a_Tree_Identification_Code" relevant=" /data/tree_identification_code  = 'yes'" required="false()" type="string"/>
+            <bind nodeset="/data/remarks" required="false()" type="string"/>
+            <bind nodeset="/data/Location_of_the_tree" required="false()" type="geopoint"/>
+            <bind nodeset="/data/Photograph_of_the_tree" required="false()" type="binary"/>
+            <bind calculate="concat('uuid:', uuid())" nodeset="/data/meta/instanceID" readonly="true()" type="string"/>
+        </model>
+    </h:head>
+    <h:body>
+        <input ref="/data/local_name_of_the_tree">
+            <label>What is the local name of the tree?</label>
+            <hint>(for example - Peepal)</hint>
+        </input>
+        <input ref="/data/scientific_name_of_tree">
+            <label>What is the scientific name of the tree?</label>
+            <hint>(for example - Ficus religiosa)</hint>
+        </input>
+        <select1 ref="/data/how_young_is_the_tree">
+            <label>How old is the tree?</label>
+            <hint>(Choose one)</hint>
+            <item>
+                <label>Very Young</label>
+                <value>very_young</value>
+            </item>
+            <item>
+                <label>Medium</label>
+                <value>medium</value>
+            </item>
+            <item>
+                <label>Old</label>
+                <value>old</value>
+            </item>
+        </select1>
+        <input ref="/data/Tentative_age_of_the_tree">
+            <label>Tentative age of the tree:</label>
+            <hint>(Approximate age of the tree)</hint>
+        </input>
+        <select1 ref="/data/condition_of_the_tree">
+            <label>How is the condition of the tree?</label>
+            <item>
+                <label>Healthy</label>
+                <value>healthy</value>
+            </item>
+            <item>
+                <label>Partially Damaged</label>
+                <value>partially_damaged</value>
+            </item>
+            <item>
+                <label>Fully Damaged</label>
+                <value>fully_damaged</value>
+            </item>
+            <item>
+                <label>Other</label>
+                <value>other</value>
+            </item>
+        </select1>
+        <input ref="/data/Other_Please_Specify">
+            <label>Other - Please Specify.</label>
+        </input>
+        <select1 ref="/data/tree_identification_code">
+            <label>Is there a Tree Identification Code?</label>
+            <item>
+                <label>Yes</label>
+                <value>yes</value>
+            </item>
+            <item>
+                <label>No</label>
+                <value>no</value>
+            </item>
+        </select1>
+        <input ref="/data/Is_there_a_Tree_Identification_Code">
+            <label>Mention the code.</label>
+        </input>
+        <input ref="/data/remarks">
+            <label>Are there any other remarks?</label>
+            <hint>(Specify if any)</hint>
+        </input>
+        <input ref="/data/Location_of_the_tree">
+            <label>Location of the tree.</label>
+            <hint>(GPS Coordinate)</hint>
+        </input>
+        <upload mediatype="image/*" ref="/data/Photograph_of_the_tree">
+            <label>Photograph of the tree.</label>
+        </upload>
+    </h:body>
 </h:html>
