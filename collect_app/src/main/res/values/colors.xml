@@ -18,25 +18,35 @@ the License.
 
     <!-- Dark Theme Palette -->
     <color name="darkPrimaryTextColor">@android:color/white</color>
-    <color name="darkPopupDialogColor">#3f3f3f</color>
+<!--    <color name="darkPopupDialogColor">#3f3f3f</color>-->
+    <color name="darkPopupDialogColor">#5E9B60</color>
     <color name="defaultDarkIconColor">@android:color/white</color>
-    <color name="darkRankItemColor">@android:color/black</color>
+<!--    <color name="darkRankItemColor">@android:color/black</color>-->
+    <color name="darkRankItemColor">#4CAF50</color>
     <color name="darkIconColorDisabled">#aaaaaa</color>
     <color name="darkIconColorEnabled">@android:color/white</color>
 
     <!-- Light Theme Palette -->
-    <color name="lightPrimaryTextColor">@android:color/black</color>
-    <color name="defaultLightIconColor">@android:color/black</color>
+<!--    <color name="lightPrimaryTextColor">@android:color/black</color>-->
+    <color name="lightPrimaryTextColor">#4CAF50</color>
+<!--    <color name="defaultLightIconColor">@android:color/black</color>-->
+    <color name="defaultLightIconColor">#4CAF50</color>
     <color name="lightRankItemColor">#EEEEEE</color>
     <color name="lightAccentColor">#2196F3</color>
     <color name="lightIconColorDisabled">#aaaaaa</color>
-    <color name="lightIconColorEnabled">@android:color/black</color>
+<!--    <color name="lightIconColorEnabled">@android:color/black</color>-->
+    <color name="lightIconColorEnabled">#4CAF50</color>
 
-    <color name="highContrastHighlight">#ff8c00</color>
+    <color name="highContrastHighlight">#F18502</color>
     <color name="displaySubtextColor">#4CAF50</color>
 
-    <color name="lights_out_yellow" >#FFB300</color>
-    <color name="transparent_black" >#A4000000</color>
+    <color name="lights_out_yellow" >#EEA802</color>
+<!--    <color name="transparent_black" >#A4000000</color>-->
+    <color name="transparent_black" >#754CAF50</color>
+
+    <color name="green_500_toolbar">#2C812F</color>
+    <color name="green_500">#44B93F</color>
+    <color name="green_500_46">#85D688</color>
 
     <color name="gray">#303030</color>
 </resources>

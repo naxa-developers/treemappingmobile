@@ -13,6 +13,7 @@
         android:layout_marginTop="@dimen/instance_list_icon_top_bottom_margin"
         app:cardPreventCornerOverlap="true"
         app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/green_500"
         app:contentPadding="@dimen/instance_list_card_view_padding">
 
         <LinearLayout

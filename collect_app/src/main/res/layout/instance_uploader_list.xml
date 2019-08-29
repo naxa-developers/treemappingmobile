@@ -22,7 +22,8 @@ the License.
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:background="@color/green_500_46">
 
         <ListView
             android:id="@android:id/list"
