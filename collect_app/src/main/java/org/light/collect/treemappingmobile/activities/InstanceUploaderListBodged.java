@@ -300,6 +300,15 @@ public class InstanceUploaderListBodged extends InstanceListActivity implements
                         data.remove("Is_there_a_Tree_Identification_Code");
                     }
 
+                    boolean hasXmlnsKey = data.has("xmlns");
+                    if(hasXmlnsKey){
+                        data.remove("xmlns");
+                    }
+                    boolean hasHttpKey = data.has("http");
+                    if(hasHttpKey){
+                        data.remove("http");
+                    }
+
                     String photoName = data.getString("Photograph_of_the_tree");
                     data.remove("Photograph_of_the_tree");
 

@@ -10,7 +10,7 @@
                     <local_name_of_the_tree/>
                     <scientific_name_of_tree/>
                     <how_young_is_the_tree/>
-                    <Tentative_age_of_the_tree/>
+                    <age_of_tree/>
                     <condition_of_the_tree/>
                     <Other_Please_Specify/>
                     <tree_identification_code/>
@@ -28,7 +28,7 @@
             <bind nodeset="/data/local_name_of_the_tree" required="false()" type="string"/>
             <bind nodeset="/data/scientific_name_of_tree" required="false()" type="string"/>
             <bind nodeset="/data/how_young_is_the_tree" required="false()" type="select1"/>
-            <bind nodeset="/data/Tentative_age_of_the_tree" required="false()" type="int"/>
+            <bind nodeset="/data/age_of_tree" required="false()" type="int"/>
             <bind nodeset="/data/condition_of_the_tree" required="false()" type="select1"/>
             <bind nodeset="/data/Other_Please_Specify" relevant=" /data/condition_of_the_tree  = 'other'" required="false()" type="string"/>
             <bind nodeset="/data/tree_identification_code" required="false()" type="select1"/>
@@ -64,7 +64,7 @@
                 <value>old</value>
             </item>
         </select1>
-        <input ref="/data/Tentative_age_of_the_tree">
+        <input ref="/data/age_of_tree">
             <label>Tentative age of the tree:</label>
             <hint>(Approximate age of the tree)</hint>
         </input>
