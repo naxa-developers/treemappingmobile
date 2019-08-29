@@ -37,15 +37,16 @@ the License.
 <!--    <color name="lightIconColorEnabled">@android:color/black</color>-->
     <color name="lightIconColorEnabled">#4CAF50</color>
 
-    <color name="highContrastHighlight">#F5FF8C00</color>
+    <color name="highContrastHighlight">#F18502</color>
     <color name="displaySubtextColor">#4CAF50</color>
 
-    <color name="lights_out_yellow" >#F3FFB300</color>
+    <color name="lights_out_yellow" >#EEA802</color>
 <!--    <color name="transparent_black" >#A4000000</color>-->
     <color name="transparent_black" >#754CAF50</color>
 
-    <color name="green_500">#308D33</color>
-<!--    <color name="green_500_46">#754CAF50</color>-->
+    <color name="green_500_toolbar">#2C812F</color>
+    <color name="green_500">#3EB442</color>
+    <color name="green_500_46">#68D86C</color>
 
     <color name="gray">#303030</color>
 </resources>
