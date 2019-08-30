@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/lights_on_crop"/>
+            android:src="@drawable/re_thinking_ring_road"/>
     </item>
 
 </layer-list>

@@ -9,10 +9,17 @@
     android:orientation="vertical">
 
 
-
+<ImageView
+    android:tint="@android:color/white"
+    android:id="@+id/iv_icon"
+    android:layout_width="60dip"
+    android:layout_height="60dip"
+    android:layout_marginTop="100dp"
+    android:src="@drawable/re_thinking_ring_road"
+    android:layout_centerHorizontal="true"/>
     <TextView
-        android:drawableTop="@drawable/ic_light_bulb"
-        android:layout_marginTop="100dp"
+        android:layout_below="@id/iv_icon"
+        android:id="@+id/tv_rethinking_ring_road"
         android:layout_centerHorizontal="true"
         style="@style/Base.TextAppearance.AppCompat.Headline"
         android:text="@string/app_name"
