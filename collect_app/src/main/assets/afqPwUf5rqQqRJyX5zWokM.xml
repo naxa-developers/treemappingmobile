@@ -53,15 +53,15 @@
             <hint>(Choose one)</hint>
             <item>
                 <label>Very Young</label>
-                <value>very_young</value>
+                <value>Very Young</value>
             </item>
             <item>
                 <label>Medium</label>
-                <value>medium</value>
+                <value>Medium</value>
             </item>
             <item>
                 <label>Old</label>
-                <value>old</value>
+                <value>Old</value>
             </item>
         </select1>
         <input ref="/data/age_of_tree">
@@ -72,15 +72,15 @@
             <label>How is the condition of the tree?</label>
             <item>
                 <label>Healthy</label>
-                <value>healthy</value>
+                <value>Healthy</value>
             </item>
             <item>
                 <label>Partially Damaged</label>
-                <value>partially_damaged</value>
+                <value>Partially damaged</value>
             </item>
             <item>
                 <label>Fully Damaged</label>
-                <value>fully_damaged</value>
+                <value>Fully damaged</value>
             </item>
             <item>
                 <label>Other</label>
