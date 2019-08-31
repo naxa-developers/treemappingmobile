@@ -9,5 +9,5 @@
     app:contentInsetEnd="0dp"
     app:contentInsetStart="0dp"
     app:contentInsetStartWithNavigation="0dp"
-    app:navigationIcon="@drawable/ic_light_bulb"
+    app:navigationIcon="@drawable/ic_tree_icon_white"
     app:theme="@style/ThemeOverlay.AppCompat.ActionBar" />
