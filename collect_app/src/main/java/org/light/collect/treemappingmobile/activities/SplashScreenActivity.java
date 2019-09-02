@@ -216,4 +216,6 @@ public class SplashScreenActivity extends Activity {
         };
         t.start();
     }
+
+
 }
